@@ -11,7 +11,6 @@ import java.util.List;
  * @author Equipo 06
  */
 public class JugadorDTO {
-    
     private Long id;
     private String nombre;
     private String avatar;

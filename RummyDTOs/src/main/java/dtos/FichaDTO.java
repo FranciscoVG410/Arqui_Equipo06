@@ -7,13 +7,14 @@ package dtos;
 import java.util.List;
 import java.util.Random;
 
+//DTO nueva
+
 /**
  * Los detalles generales de una ficha en Rummy.
  *
  * @author Equipo 06
  */
 public class FichaDTO {
-
     //Atributos de clase.
     private int puntos;
 
