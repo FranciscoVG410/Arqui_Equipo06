@@ -20,6 +20,12 @@ public class ControladorPartida {
         this.mazo = mazo;
     }
 
+    public void update()
+    {
+        // Actualizar el modelo de la partida
+        jugador.actualizarEstado();
+    }
+    
     // Extraer una ficha del mazo.
     public FichaDTO extraerFicha() {
         FichaDTO ficha = new FichaDTO();

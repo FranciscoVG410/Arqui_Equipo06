@@ -10,6 +10,8 @@ import dtos.FichaDTO;
 import dtos.JugadorDTO;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
 
 /**
  *
@@ -26,6 +28,9 @@ public class FrmPartida extends javax.swing.JFrame {
      */
     public FrmPartida() {
         initComponents();
+        panelMazo.setLayout(new BoxLayout(panelMazo, BoxLayout.Y_AXIS));
+    
+        // El resto de tu inicialización
         Prueba p = new Prueba();
         p.construirMazo();
         List<FichaDTO> fichasJ = new ArrayList<>();
@@ -146,11 +151,26 @@ public class FrmPartida extends javax.swing.JFrame {
 
     private void btnJalarFichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJalarFichaActionPerformed
         
-        ctrlP.extraerFicha();
-        
-        
+        ctrlP.extraerFicha();ctrlP.extraerFicha(); // Extraer ficha (asegúrate de que esto funcione)
+
+        // Crear el JLabel con un texto significativo
+        JLabel label = new JLabel("Ficha extraída");
+
+        // Añadir el JLabel al panelMazo
+        panelMazo.add(label);
+
+        // Actualizar el panel para reflejar los cambios
+        panelMazo.revalidate();
+        panelMazo.repaint();
     }//GEN-LAST:event_btnJalarFichaActionPerformed
 
+    public void update()
+    {
+        // Actualizar la vista del FrmPartida
+        ctrlP.extraerFicha();
+        ctrlP.update();
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnJalarFicha;
     private javax.swing.JPanel jPanel1;
